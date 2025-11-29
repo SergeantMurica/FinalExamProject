@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects - AnimeHub</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/project.css" />
+    <link rel="stylesheet" href="css/sakura.css" />
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">AnimeHub</a>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="search.html" class="nav-link">Search</a></li>
+          <li><a href="watchlist.html" class="nav-link">Watchlist</a></li>
+          <li><a href="news.html" class="nav-link">Upcoming Anime</a></li>
+          <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <section class="projects-section">
+        <h1>JavaScript Features For Final Exam</h1>
+        <!-- Project 1 -->
+        <article class="project-card">
+          <h2>1. Fetch API - Real-Time Data Retrieval</h2>
+          <p>
+            The primary JavaScript feature on the Search page is the Fetch API,
+            which retrieves anime data from the Jikan API (MyAnimeList). When
+            users enter a search term and submit the form, JavaScript makes an
+            asynchronous HTTP request to the Jikan API endpoint. The API returns
+            anime data in JSON format, which is then parsed and processed. This
+            demonstrates the ability to work with external APIs, handle
+            asynchronous operations, and manage API responses. The
+            implementation includes error handling to manage network failures or
+            API rate limits.
+          </p>
+          <p>
+            <strong>Location:</strong> <a href="search.html">Search Page</a>
+          </p>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <h2>2. Advanced Array Methods - Search & Filter System</h2>
+          <p>
+            The Search page implements a standard filtering system using
+            JavaScript array methods including filter(), map(), and find(). When
+            users select filters by genre, rating, or status, the application
+            uses these array methods to iterate through the fetched anime data
+            and apply conditional logic. Multiple filters can be combined to
+            create complex search queries. This demonstrates understanding of
+            array manipulation, higher-order functions, and conditional logic.
+            The filter system updates search results without requiring
+            additional API calls, improving performance and user experience.
+          </p>
+          <p>
+            <strong>Location:</strong> <a href="search.html">Search Page</a> and
+            <a href="news.html">Upcoming Anime Page</a>
+          </p>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <h2>3. DOM Manipulation - Dynamic Content Rendering</h2>
+          <p>
+            Throughout the website, JavaScript dynamically generates and inserts
+            HTML elements into the DOM using methods like createElement(),
+            appendChild(), and innerHTML. On the Search page, anime cards are
+            created and inserted based on API results. On the Anime Detail page,
+            comprehensive anime information is dynamically rendered. The
+            Watchlist page displays saved anime items. This demonstrates the
+            ability to manipulate the Document Object Model, and update page
+            content in real-time without page reloads.
+          </p>
+          <p>
+            <strong>Location:</strong> <a href="search.html">Search Page</a>,
+            <a href="anime-detail.html">Anime Detail Page</a>, and
+            <a href="watchlist.html">Watchlist Page</a>
+          </p>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <h2>4. Event Listeners - User Interaction Handling</h2>
+          <p>
+            Event listeners are attached to various HTML elements throughout the
+            site to handle user interactions. The Search page uses event
+            listeners on the form submit button, genre filter dropdown, status
+            filter dropdown, and rating input field. The Watchlist page uses
+            event listeners on "Add to Watchlist" buttons and "Remove from
+            Watchlist" buttons. When users interact with these elements, the
+            corresponding event handlers trigger functions like performSearch(),
+            toggleFilter(), addToWatchlist(), and removeFromWatchlist(). This
+            demonstrates understanding of event-driven programming, event
+            delegation, and proper event handler management.
+          </p>
+          <p>
+            <strong>Location:</strong> <a href="search.html">Search Page</a> and
+            <a href="watchlist.html">Watchlist Page</a>
+          </p>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card">
+          <h2>5. Form Handling & Validation</h2>
+          <p>
+            The Search page implements client-side form validation to ensure
+            users provide valid search input before making API requests.
+            JavaScript prevents default form submission behavior and implements
+            custom validation that checks if the search input is empty. Error
+            messages are dynamically displayed to users if validation fails. The
+            form captures and processes user input from text fields and dropdown
+            selectors. This demonstrates understanding of form handling, input
+            validation, error messaging, and preventDefault() method. Proper
+            validation improves the user experience and reduces unnecessary API
+            calls.
+          </p>
+          <p>
+            <strong>Location:</strong> <a href="search.html">Search Page</a>
+          </p>
+        </article>
+
+        <!-- Bonus Project -->
+        <article class="project-card">
+          <h2>Bonus: Local Storage - Data Persistence</h2>
+          <p>
+            The Watchlist page implements browser Local Storage to persist user
+            data across sessions. When users add anime to their watchlist, the
+            data is serialized to JSON format and stored in the browser's
+            localStorage. When the Watchlist page loads, JavaScript retrieves
+            and deserializes the stored data, displaying previously saved items.
+            This feature allows users to maintain their watchlist even after
+            closing their browser.
+          </p>
+          <p>
+            <strong>Location:</strong>
+            <a href="watchlist.html">Watchlist Page</a>
+          </p>
+        </article>
+
+        <!-- Summary -->
+        <section class="projects-summary">
+          <h2>Summary</h2>
+          <p>
+            AnimeHub successfully demonstrates mastery of five essential
+            JavaScript concepts: Fetch API for data retrieval, array methods for
+            data manipulation, DOM manipulation for dynamic content, event
+            listeners for user interaction, and form validation for input
+            handling. The bonus implementation of Local Storage further enhances
+            user experience by providing data persistence. Together, these
+            features create a functional, user-friendly anime discovery
+            platform.
+          </p>
+        </section>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        &copy; 2025 AnimeHub. All rights reserved. Powered by Jikan API
+        (MyAnimeList).
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

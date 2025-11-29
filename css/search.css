@@ -1,0 +1,193 @@
+/* ========== SEARCH PAGE ========== */
+
+.search-section {
+  background: var(--glass-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(255, 107, 157, 0.15);
+  border: 1px solid var(--crystal-border);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.search-section h1 {
+  color: var(--sakura-light);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-form {
+  background: var(--crystal-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid var(--crystal-border);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--crystal-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: var(--dark-secondary);
+  color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--sakura-pink);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.error-message {
+  color: var(--sakura-light);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+/* ========== FILTERS ========== */
+
+.filters {
+  background: var(--crystal-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--crystal-border);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.filters h3 {
+  color: var(--sakura-light);
+  margin-bottom: 1rem;
+}
+
+.filter-group {
+  margin-bottom: 1rem;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--crystal-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--dark-secondary);
+  color: var(--text-primary);
+}
+
+/* ========== SEARCH RESULTS ========== */
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.anime-card {
+  background: var(--glass-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.15);
+  border: 1px solid var(--crystal-border);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.anime-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(255, 107, 157, 0.3);
+  border-color: var(--sakura-pink);
+}
+
+.anime-card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.anime-card-content {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-card-title {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.anime-card-info {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.3rem;
+}
+
+.anime-card-rating {
+  color: var(--sakura-light);
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.anime-card-button {
+  margin-top: 0.8rem;
+  background: linear-gradient(
+    135deg,
+    var(--sakura-pink) 0%,
+    var(--sakura-dark) 100%
+  );
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 3px 10px var(--accent-glow);
+}
+
+.anime-card-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--accent-glow);
+}

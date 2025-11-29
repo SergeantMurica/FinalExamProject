@@ -1,0 +1,107 @@
+/* ========== ANIME DETAIL PAGE ========== */
+
+.anime-detail {
+  background: var(--glass-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(255, 107, 157, 0.15);
+  border: 1px solid var(--crystal-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+}
+
+.detail-image {
+  grid-column: 1;
+}
+
+.detail-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(255, 107, 157, 0.3);
+  border: 1px solid var(--crystal-border);
+}
+
+.detail-content {
+  grid-column: 2;
+}
+
+.detail-content h1 {
+  color: var(--sakura-light);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.detail-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  background: var(--crystal-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--crystal-border);
+}
+
+.info-item strong {
+  display: block;
+  color: var(--sakura-light);
+  margin-bottom: 0.5rem;
+}
+
+.detail-content p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.detail-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.detail-buttons button {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.add-detail-btn {
+  background: linear-gradient(
+    135deg,
+    var(--sakura-pink) 0%,
+    var(--sakura-dark) 100%
+  );
+  color: white;
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+.add-detail-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+.remove-detail-btn {
+  background: linear-gradient(135deg, #ff4757 0%, #c0392b 100%);
+  color: white;
+  box-shadow: 0 3px 10px rgba(255, 71, 87, 0.3);
+}
+
+.remove-detail-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.5);
+}

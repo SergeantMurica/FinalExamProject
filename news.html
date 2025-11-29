@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upcoming Anime - AnimeHub</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/news.css" />
+    <link rel="stylesheet" href="css/sakura.css" />
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">AnimeHub</a>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="search.html" class="nav-link">Search</a></li>
+          <li><a href="watchlist.html" class="nav-link">Watchlist</a></li>
+          <li>
+            <a href="news.html" class="nav-link active">Upcoming Anime</a>
+          </li>
+          <li><a href="project.html" class="nav-link">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <section class="recommended-section">
+        <h1>Upcoming Anime</h1>
+
+        <!-- Info Message -->
+        <p class="info-text">Discover exciting anime coming soon:</p>
+
+        <!-- news Container -->
+        <div id="newsItems" class="search-results">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Loading Message -->
+        <div id="loadingNews" class="loading hidden">
+          <p>Loading upcoming anime...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div id="newsError" class="empty-message hidden">
+          <p>
+            Unable to load upcoming anime at this time. Please try again later.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        &copy; 2025 AnimeHub. All rights reserved. Powered by Jikan API
+        (MyAnimeList).
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

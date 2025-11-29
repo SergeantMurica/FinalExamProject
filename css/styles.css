@@ -1,0 +1,212 @@
+/* ========== GLOBAL STYLES ========== */
+@import "footer.css";
+@import "header.css";
+
+:root {
+  /* Dark Sakura Theme Colors */
+  --dark-bg: #0a0a0f;
+  --dark-secondary: #151520;
+  --dark-tertiary: #1a1a2e;
+  --sakura-pink: #ff6b9d;
+  --sakura-light: #ffa8c5;
+  --sakura-dark: #c44569;
+  --cherry-purple: #4a1a3d;
+  --crystal-bg: rgba(255, 255, 255, 0.05);
+  --crystal-border: rgba(255, 171, 197, 0.15);
+  --glass-bg: rgba(26, 26, 46, 0.7);
+  --text-primary: #e8e8f0;
+  --text-secondary: #b8b8c8;
+  --accent-glow: rgba(255, 107, 157, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: linear-gradient(
+    135deg,
+    var(--dark-bg) 0%,
+    var(--cherry-purple) 100%
+  );
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Sakura Petals Background Animation */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      2px 2px at 20% 30%,
+      var(--sakura-pink),
+      transparent
+    ),
+    radial-gradient(2px 2px at 60% 70%, var(--sakura-light), transparent),
+    radial-gradient(1px 1px at 50% 50%, var(--sakura-pink), transparent),
+    radial-gradient(1px 1px at 80% 10%, var(--sakura-light), transparent);
+  background-size: 200% 200%;
+  opacity: 0.1;
+  animation: floatPetals 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatPetals {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== CONTAINER ========== */
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== BUTTONS ========== */
+
+.search-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--sakura-pink) 0%,
+    var(--sakura-dark) 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--accent-glow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.search-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--accent-glow);
+}
+
+.search-btn:active {
+  transform: translateY(0);
+}
+
+.add-btn,
+.clear-btn {
+  background: linear-gradient(
+    135deg,
+    var(--sakura-pink) 0%,
+    var(--sakura-dark) 100%
+  );
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--accent-glow);
+  margin: 0.5rem 0;
+}
+
+.add-btn:hover,
+.clear-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+.remove-btn {
+  background: linear-gradient(135deg, #ff4757 0%, #c0392b 100%);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255, 71, 87, 0.3);
+}
+
+.remove-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.5);
+}
+
+.back-button {
+  display: inline-block;
+  background: linear-gradient(
+    135deg,
+    var(--sakura-pink) 0%,
+    var(--sakura-dark) 100%
+  );
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--accent-glow);
+}
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+/* ========== LOADING SPINNER ========== */
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: var(--sakura-pink);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .detail-info {
+    grid-template-columns: 1fr;
+  }
+}

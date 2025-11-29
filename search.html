@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search - AnimeHub</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/sakura.css" />
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">AnimeHub</a>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="search.html" class="nav-link active">Search</a></li>
+          <li><a href="watchlist.html" class="nav-link">Watchlist</a></li>
+          <li><a href="news.html" class="nav-link">Upcoming Anime</a></li>
+          <li><a href="project.html" class="nav-link">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <section class="search-section">
+        <h1>Search Anime</h1>
+
+        <!-- Search Form -->
+        <form id="searchForm" class="search-form">
+          <!-- Search Input with Validation -->
+          <div class="form-group">
+            <label for="searchInput">Anime Title (Optional):</label>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Enter anime title or leave blank for current season..." />
+            <span id="searchError" class="error-message"></span>
+          </div>
+
+          <!-- Filter Section -->
+          <div class="filters">
+            <!-- Genre Filter -->
+            <div class="filter-group">
+              <label for="genreFilter">Genre:</label>
+              <select id="genreFilter" title="Filter by genre">
+                <option value="">All Genres</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="ecchi">Ecchi</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="horror">Horror</option>
+                <option value="mecha">Mecha</option>
+                <option value="music">Music</option>
+                <option value="mystery">Mystery</option>
+                <option value="psychological">Psychological</option>
+                <option value="romance">Romance</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="slice of life">Slice of Life</option>
+                <option value="sports">Sports</option>
+                <option value="supernatural">Supernatural</option>
+                <option value="thriller">Thriller</option>
+              </select>
+            </div>
+
+            <!-- Status Filter -->
+            <div class="filter-group">
+              <label for="statusFilter">Status:</label>
+              <select id="statusFilter" title="Filter by airing status">
+                <option value="">All Status</option>
+                <option value="airing">Currently Airing</option>
+                <option value="complete">Completed</option>
+                <option value="upcoming">Upcoming</option>
+              </select>
+            </div>
+
+            <!-- Type Filter -->
+            <div class="filter-group">
+              <label for="typeFilter">Type:</label>
+              <select id="typeFilter" title="Filter by anime type">
+                <option value="">All Types</option>
+                <option value="tv">TV</option>
+                <option value="movie">Movie</option>
+                <option value="ova">OVA</option>
+                <option value="special">Special</option>
+                <option value="ona">ONA</option>
+                <option value="music">Music</option>
+              </select>
+            </div>
+
+            <!-- Score/Rating Filter -->
+            <div class="filter-group">
+              <label>Minimum Rating:</label>
+              <input
+                type="number"
+                id="scoreFilter"
+                min="0"
+                max="10"
+                step="0.5"
+                placeholder="0-10" />
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="search-btn">Search</button>
+        </form>
+
+        <!-- Loading Indicator -->
+        <div id="loadingSpinner" class="loading hidden">
+          <p>Searching anime database...</p>
+        </div>
+
+        <!-- Results Section -->
+        <div id="searchResults" class="search-results">
+          <!-- Results populated by JavaScript -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        &copy; 2025 AnimeHub. All rights reserved. Powered by Jikan API
+        (MyAnimeList).
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

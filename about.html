@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - AnimeHub</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/sakura.css" />
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">AnimeHub</a>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="search.html" class="nav-link">Search</a></li>
+          <li><a href="watchlist.html" class="nav-link">Watchlist</a></li>
+          <li><a href="news.html" class="nav-link">Upcoming Anime</a></li>
+          <li><a href="project.html" class="nav-link">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <section class="page-content">
+        <h1>About AnimeHub</h1>
+
+        <div class="about-section">
+          <h2>Our Mission</h2>
+          <p>
+            AnimeHub was created to address a critical gap in the anime
+            streaming experience. Existing platforms like Crunchyroll offer
+            extensive libraries but fall short in search and discovery
+            functionality. Our mission is to provide anime enthusiasts with a
+            powerful, user-friendly tool to search, discover, and organize their
+            anime preferences.
+          </p>
+        </div>
+
+        <div class="about-section">
+          <h2>How It Works</h2>
+          <p>
+            AnimeHub leverages the Jikan API, which provides access to
+            MyAnimeList's comprehensive anime database. Our platform processes
+            this data in real-time, allowing users to:
+          </p>
+          <ul>
+            <li>Search by title, genre, rating, and broadcast status</li>
+            <li>View detailed information about thousands of anime</li>
+            <li>Save their favorite anime to a personal watchlist</li>
+            <li>
+              Receive intelligent recommendations based on their preferences
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-section">
+          <h2>Technology Stack</h2>
+          <p>AnimeHub is built with modern web technologies:</p>
+          <ul>
+            <li>
+              <strong>HTML5:</strong> Semantic markup for proper structure
+            </li>
+            <li>
+              <strong>CSS3:</strong> Responsive styling and professional design
+            </li>
+            <li>
+              <strong>JavaScript (ES6+):</strong> Dynamic functionality and API
+              integration
+            </li>
+            <li>
+              <strong>Jikan API:</strong> Real-time access to MyAnimeList data
+            </li>
+            <li>
+              <strong>Local Storage:</strong> Browser-based data persistence for
+              watchlists
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-section">
+          <h2>Why Choose AnimeHub?</h2>
+          <ul>
+            <li>No registration or login required</li>
+            <li>Fast, responsive search with multiple filter options</li>
+            <li>
+              No login required; your watchlist is saved locally in your browser
+            </li>
+            <li>Intelligent recommendation algorithm</li>
+            <li>Clean, intuitive user interface</li>
+            <li>Completely free to use</li>
+          </ul>
+        </div>
+
+        <div class="about-section">
+          <h2>Data Source</h2>
+          <p>
+            All anime data on AnimeHub is sourced from MyAnimeList through the
+            Jikan API. MyAnimeList is the world's largest anime and manga
+            community and database, with millions of user ratings and reviews.
+            This ensures that our recommendations and information are accurate
+            and up-to-date.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        &copy; 2025 AnimeHub. All rights reserved. Powered by Jikan API
+        (MyAnimeList).
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

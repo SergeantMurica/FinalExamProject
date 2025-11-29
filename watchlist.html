@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watchlist - AnimeHub</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/watchlist.css" />
+    <link rel="stylesheet" href="css/sakura.css" />
+  </head>
+  <body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">AnimeHub</a>
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="search.html" class="nav-link">Search</a></li>
+          <li>
+            <a href="watchlist.html" class="nav-link active">Watchlist</a>
+          </li>
+          <li><a href="news.html" class="nav-link">Upcoming Anime</a></li>
+          <li><a href="project.html" class="nav-link">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+      <section class="watchlist-section">
+        <h1>My Watchlist</h1>
+
+        <!-- Clear Watchlist Button -->
+        <button id="clearWatchlistBtn" class="clear-btn">Clear All</button>
+
+        <!-- Watchlist Items Container -->
+        <div id="watchlistItems" class="watchlist-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Empty State Message -->
+        <div id="emptyMessage" class="empty-message hidden">
+          <p>Your watchlist is empty!</p>
+          <a href="search.html" class="add-btn">Add Anime to Watchlist</a>
+        </div>
+      </section>
+
+      <!-- Recommendations Section -->
+      <section class="recommendations-section" id="recommendationsSection">
+        <h2>Recommended For You</h2>
+        <p class="recommendations-subtitle">Based on your watchlist</p>
+        <div id="recommendedItems" class="watchlist-grid">
+          <!-- Populated by JavaScript -->
+        </div>
+        <div id="noRecommendations" class="empty-message hidden">
+          <p>Add anime to your watchlist to see recommendations!</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        &copy; 2025 AnimeHub. All rights reserved. Powered by Jikan API
+        (MyAnimeList).
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

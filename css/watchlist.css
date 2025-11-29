@@ -1,0 +1,214 @@
+/* ========== WATCHLIST PAGE ========== */
+
+.watchlist-section {
+  background: var(--glass-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(255, 107, 157, 0.15);
+  border: 1px solid var(--crystal-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.watchlist-section h1 {
+  color: var(--sakura-light);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid var(--sakura-pink);
+  padding-bottom: 1rem;
+}
+
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.watchlist-item {
+  background: var(--glass-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.15);
+  border: 1px solid var(--crystal-border);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.watchlist-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(255, 107, 157, 0.3);
+  border-color: var(--sakura-pink);
+}
+
+.watchlist-item:active {
+  transform: translateY(-3px);
+}
+
+.watchlist-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: var(--dark-secondary);
+}
+
+.watchlist-item-content {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.watchlist-item-title {
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.watchlist-item-rating {
+  color: var(--sakura-light);
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.remove-from-watchlist-btn {
+  background: linear-gradient(135deg, #ff4757 0%, #c0392b 100%);
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255, 71, 87, 0.3);
+}
+
+.remove-from-watchlist-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.5);
+}
+
+.empty-message {
+  text-align: center;
+  padding: 3rem;
+  background: var(--crystal-bg);
+  border-radius: 12px;
+  border: 2px dashed var(--crystal-border);
+}
+
+.empty-message p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* ========== STREAMING SERVICES ========== */
+
+.streaming-info {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 107, 157, 0.1);
+  border-radius: 6px;
+  border: 1px solid var(--crystal-border);
+}
+
+/* ========== RECOMMENDATIONS SECTION ========== */
+
+.recommendations-section {
+  background: var(--glass-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(255, 107, 157, 0.15);
+  border: 1px solid var(--crystal-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-top: 2rem;
+}
+
+.recommendations-section h2 {
+  color: var(--sakura-light);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.recommendations-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.recommendation-card {
+  opacity: 0.95;
+}
+
+.recommendation-card:hover {
+  opacity: 1;
+}
+
+.recommendation-genres {
+  color: var(--sakura-pink);
+  font-size: 0.85rem;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.add-recommendation-btn {
+  background: linear-gradient(135deg, var(--sakura-pink) 0%, #ff69b4 100%);
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(255, 107, 157, 0.3);
+}
+
+.add-recommendation-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 157, 0.5);
+}
+
+.info-text {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 768px) {
+  .watchlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .watchlist-section h1,
+  .recommendations-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .recommendations-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .watchlist-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .watchlist-item img {
+    height: 200px;
+  }
+}
